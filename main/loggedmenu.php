@@ -20,7 +20,31 @@
 	require_once ("chklog.php");
 
 	if ($logged) {
-	    echo "COOL";
+        echo "COOL";
+
+        ?>
+
+<script type="application/javascript">
+        $(document).ready(function(){
+            alert('a')
+
+            $.ajax({
+                type: "GET",
+                url: "http://dblp.org/search/publ/api",
+                dataType: "xml",
+                success: function(xml){
+                    alert('succ')
+
+            },
+            error: function() {
+                alert("An error occurred while processing XML file.");
+            }
+        });
+
+
+        });
+</script>
+<?php
     }
 ?>
 
