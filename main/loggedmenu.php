@@ -8,7 +8,7 @@
 
 <?php
 	session_start();
-	$_SESSION['title'] = "ppfinder.gr";
+	$_SESSION['title'] = "test test ppfinder.gr";
 
 	echo "<title>$_SESSION[title]</title>";
 ?>
