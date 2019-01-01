@@ -1,5 +1,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
 
 <?php
 	session_start();
@@ -7,7 +12,7 @@
 ?>
 
 <head>
-<link REL="SHORTCUT ICON" HREF="css/favicon.ico">
+<link REL="SHORTCUT ICON" HREF="css/library_logo.png">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php echo "<title>$_SESSION[title]</title>"; ?>
 <link href="css/index.css" rel="stylesheet" type="text/css" />
@@ -19,7 +24,7 @@
 
 <body class="background">
 
-<img src="css/logo2.jpg" />
+<img src="css/banner.png" class="responsive" alt="<b> Paperfinder.gr </b>"  width="250" height="150" />
 
 <?php
 	$act = '';
@@ -59,8 +64,8 @@
 <div class="wrapperMENU">
 <ul id="menu">
     <li class="logo">
-        <?php echo "<img style='float:left;' alt='' src='skins/default/dropmenu/bannermenu.jpg'>"; ?>
-        <ul id="main" style="position:relative; top:0px;">
+        <?php echo "<img style='float:left;' alt='' src='skins/default/dropmenu/banner.png'>"; ?>
+        <ul id="main" style="position:relative; top:0px; ">
             <li><?php echo $glL['ppfinder'] ?></li>
             <li class="last">
                 <?php echo "<img class='corner_left' alt='' src='skins/default/dropmenu/corner_blue_left.png'/>"; ?>
@@ -76,16 +81,18 @@
 </ul>
 <?php echo "<img style='float:left;' alt='' src='skins/default/dropmenu/menu_right.png'/>"; ?>
 </div>
-    
+
 <div class="TEXTBOX">
-<h3>
-Welcome to ppfinder.gr!
-</h3>
-</div>
+<h3>Καλώς όρισες στο Paperfinder.gr!<h3> <br>
+<h7>
+<i class="fa fa-save" style="font-size:34px;color:black;"></i> Αποθήκευσε τις δημοσιεύσεις που σε ενδιαφέρουν! <br>
+<i class="fa fa-heart" style="font-size:34px;color:black;"></i> Δημιούργησε τη λίστα με τις αγαπημένες σου!<br>
+<i class="fa fa-pencil" style="font-size:34px;color:black;"></i> Πρόσθεσε σχόλια σε αυτές! <br>
+<i class="fa fa-book" style="font-size:34px;color:black;"></i>Σημείωσε ποιές έχεις διαβάσει! <br>
+</h7>
+</div> 
     
 <div class="LOGINBOX">
-
-
 <?php
 	echo "<form action='$actstr' method='post'>";
 ?>
@@ -93,14 +100,46 @@ Welcome to ppfinder.gr!
 <h5 class="headline"><?php echo $glL['uid'] ?></h5>
 <input type="text" name="login" size="30" />
 <h5 class="headline"><?php echo $glL['pass'] ?></h5>
-<input type="password" name="password" size="25"/>
+<input type="password" name="password" size="31"/>
 <br /><br />
-<input type="submit" style="height: 25px; width: 120px" value="<?php echo $glL['entry'] ?>" />
-
+<input type="submit" style="height: 25px; width: 80px; text-align:center;" value="<?php echo $glL['entry'] ?>" />
 </form>
+<!-- Button to open the modal -->
+<button onclick="document.getElementById('id01').style.display='block'">Εγγραφή</button>
 
-<a href="index.php?lang=gr"><img src="css/flag_gr.png" alt="Ελληνικά" style="position:absolute;left:5%;top:428px;border:none"></a>
-<a href="index.php?lang=eng"><img src="css/flag_eng.png" alt="English" style="position:absolute;left:31%;top:428px;border:none"></a>
+<!-- The Modal (contains the Sign Up form) -->
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">times;</span>
+  <form class="modal-content" action="/action_page.php">
+    <div class="container">
+      <h1>Εγγραφή Χρήστη</h1>
+      <p>Παρακαλώ, συμπληρώστε την παρακάτω φόρμα ώστε να δημιουργήσετε λογαριασμό.</p>
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Κωδικός πρόσβασης</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label for="psw-repeat"><b>Επανάληψη κωδικού πρόσβασης</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Θυμήσου με
+      </label>
+
+      <p>Με τη δημιουργία λογαριασμού συμφωνείτε με τους <a href="#" style="color:dodgerblue">Όρους και προϋποθέσεις</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Ακύρωση</button>
+        <button type="submit" class="signup">Εγγραφή</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<a href="index.php?lang=gr"><img src="css/greece_flag.png" alt="Ελληνικά" style="position:absolute;left:27%;top:428px;border:none"></a>
+<a href="index.php?lang=eng"><img src="css/england_flag.png" alt="English" style="position:absolute;left:53%;top:428px;border:none"></a>
 </div>
 
 </body>
