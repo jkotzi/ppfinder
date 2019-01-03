@@ -73,52 +73,13 @@
         $res = mysqli_query($con, $query);
         echo $res;
     }
-
-
-/*
-
-*/
-
-        //$(resultsDIV).append("<span class='authors'>");
-		//echo "<span class='authors'>AAAAAA</span>";
-
-		/*
-		$idAr = explode(",", $_POST['delids']);
-		for ($i = 0; $i < sizeof($idAr); $i++)
-		{
-			$rid = $idAr[$i];
-			$res = mysql_query("DELETE FROM student WHERE id='$rid'", $con);	
-		}*/
-
-	/*
-	else if ($_GET['action'] == 3) // Validate Login
-	{
-		$login = $_GET['login'];
-		$res = mysql_query("SELECT * FROM student WHERE login='$login'", $con);
-		$num_rows = mysql_num_rows($res);		
-		if ($num_rows >= 1)
-		{
-			$row = mysql_fetch_array($res);
-			if ($row['id'] == $_GET['id'])
-				echo "var gl_RECExists = '0';";
-			else
-				echo "var gl_RECExists = '1';";
-		}
-		else
-			echo "var gl_RECExists = '0';";
-	}
-	else if ($_GET['action'] == 4) // Update only email and password
-	{
-		$studentdata = $_SESSION['studentdata'];
-		$rid = $studentdata['id'];
-		$query = "UPDATE student SET password='$_POST[password]', email='$_POST[email]' WHERE id='$rid'";	
-			
-		$res = mysql_query($query, $con);		
-	}
-	*/
-
-	//echo $query;
-	//echo $res;
+    else if ($_GET['action'] == 5) // Delete Paper
+    {
+        $query = "DELETE FROM bookmarks WHERE id='$_POST[id]'";
+        //echo $query;
+        $res = mysqli_query($con, $query);
+        echo $res;
+    }
 
 	mysqli_close($con);
 ?>

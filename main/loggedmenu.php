@@ -3,7 +3,7 @@
 <head>
 <link REL="SHORTCUT ICON" HREF="../css/favicon.ico">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="../css/index.css" rel="stylesheet" type="text/css" />
+<link href="../css/loggedmenu.css" rel="stylesheet" type="text/css" />
 <script src="../tools/jquery/jquery.js" type="text/javascript"></script>
 <script type="text/javascript" src="../tools/skinnytip_v2.0/skinnytip.js"></script>
 
@@ -54,9 +54,6 @@
                 alert("An error occurred while inserting the bookmark.");
             }
         });
-
-        $(controlsDIV).fadeIn("slow");
-
     }
 
     function OnVisit(url) {
@@ -68,11 +65,33 @@
     }
 
     function OnDelete() {
+        if (confirm("Are you sure you want to delete?"))
+        {
+            $.ajax({
+                type: "POST",
+                url: "actionmng.php?action=5",
+                data: {
+                    id: $(titleSEL).val()
+                },
+                dataType: "text",
+                success: function (result) {
+                    if (result != "1")
+                        alert("Error in deleting data");
+                    else
+                    {
+                        $(controlsDIV).fadeOut("slow");
+                        OnSelectCategory();
+                    }
+                },
+                error: function () {
+                    alert("An error occurred while inserting the bookmark.");
+                }
+            });
+        }
     }
 
-
     function OnSelectPaper() {
-        $(controlsDIV).fadeOut("fast");
+
         $.ajax({
             type: "POST",
             url: "actionmng.php?action=3",
@@ -105,6 +124,7 @@
             dataType: "text",
             success: function(result){
                 //alert(result);
+                $(controlsDIV).fadeOut("slow");
                 $(bookmarksDIV).html(result);
             },
             error: function() {

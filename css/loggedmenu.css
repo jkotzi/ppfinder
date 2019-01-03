@@ -1,0 +1,82 @@
+.background {
+	background-image:url(index.jpg);
+	background-repeat:no-repeat;
+	background-repeat:repeat-x;
+}
+
+h4.headline{font-family:Arial, Helvetica, sans-serif;font-weight:bold;text-shadow:2px 2px 3px #226666;color:#ffff44; margin:15px;}
+h5.headline{font-family:Arial, Helvetica, sans-serif;font-weight:bold;text-shadow:2px 2px 3px #226666;color:#ffff44; margin:5px;}
+
+.wrapperMENU {position: absolute; top: 170px;left: 2%; z-index:100;}
+
+span.title{font-weight: bold}
+
+
+.TEXTBOX {
+	position: absolute;
+	padding-left:1%;
+	background-color:white;
+	top:225px;
+	left:2%;
+	width:510px;
+	height:460px;
+	border:1px solid #1C0054;	
+	-webkit-border-radius: 20px 20px 20px 20px;
+	-moz-border-radius: 20px 20px 20px 20px;
+	border-radius: 20px 20px 20px 20px;
+	/* for IE */
+	filter:alpha(opacity=75);
+	/* CSS3 standard */
+	opacity:0.75;	
+	-moz-box-shadow: 3px 3px 4px #000;
+	-webkit-box-shadow: 3px 3px 4px #000;
+	box-shadow: 3px 3px 4px #000;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')"; /* For IE 8 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000'); /* For IE 5.5 - 7 */
+}
+
+.MAINBOX {
+	position: absolute;
+	padding-left:1%;
+	background-color:white;
+	top:10px;
+	left:2%;
+	width:250px;
+	height:400px;
+	border:1px solid #1C0054;
+	-webkit-border-radius: 20px 20px 20px 20px;
+	-moz-border-radius: 20px 20px 20px 20px;
+	border-radius: 20px 20px 20px 20px;
+	/* for IE */
+	filter:alpha(opacity=75);
+	/* CSS3 standard */
+	opacity:0.75;
+	-moz-box-shadow: 3px 3px 4px #000;
+	-webkit-box-shadow: 3px 3px 4px #000;
+	box-shadow: 3px 3px 4px #000;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')"; /* For IE 8 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000'); /* For IE 5.5 - 7 */
+}
+
+.LOGINBOX {
+	position: absolute;
+	background-image:url(mainbox.png);
+	top:170px;
+	right:2%;
+	width:310px;
+	height:470px;
+
+	z-index:1000;
+}
+
+.RESULTDIV
+{
+	font-style: italic;
+	color: red;
+	background-color:white;
+}
+
+.RESULTDIV:hover
+{
+	background-color:grey;
+}
