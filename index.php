@@ -1,3 +1,4 @@
+<?php include('main/registration.php') ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
@@ -53,12 +54,14 @@
 	{
 		case 'login':
 			require ("main/login.php");
-		break;
+    break;
+   
 	}
 
 	$attempt++;
 	
-	$actstr = "index.php?lang=$lang&action=login&attempt=$attempt";
+  $actstr = "index.php?lang=$lang&action=login&attempt=$attempt";
+ 
 ?>
 
 <div class="wrapperMENU">
@@ -91,7 +94,7 @@
 <i class="fa fa-book" style="font-size:34px;color:black;"></i>Σημείωσε ποιές έχεις διαβάσει! <br>
 </h7>
 </div> 
-    
+
 <div class="LOGINBOX">
 <?php
 	echo "<form action='$actstr' method='post'>";
@@ -105,16 +108,26 @@
 <input type="submit" style="height: 25px; width: 80px; text-align:center;" value="<?php echo $glL['entry'] ?>" />
 </form>
 <!-- Button to open the modal -->
-<button onclick="document.getElementById('id01').style.display='block'">Εγγραφή</button>
+<button onclick="document.getElementById('id01').style.display='block'" name="register">Εγγραφή</button>
 
 <!-- The Modal (contains the Sign Up form) -->
+
 <div id="id01" class="modal">
-  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">times;</span>
-  <form class="modal-content" action="/action_page.php">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">Επιστροφή</span>
+  <form class="modal-content" method="post" action="main/registration.php">
     <div class="container">
       <h1>Εγγραφή Χρήστη</h1>
       <p>Παρακαλώ, συμπληρώστε την παρακάτω φόρμα ώστε να δημιουργήσετε λογαριασμό.</p>
       <hr>
+      <label for="login"><b>Όνομα Χρήστη</b></label>
+      <input type="text" placeholder="Enter Username" name="login" required>
+
+      <label for="surname"><b>Επώνυμο </b></label>
+      <input type="text" placeholder="Enter surname" name="surname" required>
+
+      <label for="name"><b>Όνομα </b></label>
+      <input type="text" placeholder="Enter name" name="name" required>
+
       <label for="email"><b>Email</b></label>
       <input type="text" placeholder="Enter Email" name="email" required>
 
@@ -128,7 +141,7 @@
         <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Θυμήσου με
       </label>
 
-      <p>Με τη δημιουργία λογαριασμού συμφωνείτε με τους <a href="#" style="color:dodgerblue">Όρους και προϋποθέσεις</a>.</p>
+      <p>Με τη δημιουργία λογαριασμού συμφωνείτε με τους <a href="https://www.lawspot.gr/nomikes-plirofories/nomothesia/genikos-kanonismos-gia-tin-prostasia-dedomenon?lspt_context=gdpr" style="color:dodgerblue">Όρους και προϋποθέσεις</a>.</p>
 
       <div class="clearfix">
         <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Ακύρωση</button>
