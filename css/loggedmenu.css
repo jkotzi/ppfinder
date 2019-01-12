@@ -58,17 +58,6 @@ span.title{font-weight: bold}
 	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000'); /* For IE 5.5 - 7 */
 }
 
-.LOGINBOX {
-	position: absolute;
-	background-image:url(mainbox.png);
-	top:170px;
-	right:2%;
-	width:310px;
-	height:470px;
-
-	z-index:1000;
-}
-
 .RESULTDIV
 {
 	font-style: italic;

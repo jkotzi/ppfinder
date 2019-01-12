@@ -9,7 +9,6 @@
 
 <?php
 	session_start();
-	$_SESSION['title'] = "test test ppfinder.gr";
 
 	echo "<title>$_SESSION[title]</title>";
 ?>
@@ -28,9 +27,24 @@
 ?>
 
 <script type="application/javascript">
+    var ChangesMade = false;
+
     $(document).ready(function(){
         OnSelectCategory();
     });
+
+    function logOut() {
+        window.location = "logout.php";
+    }
+
+    function ToggleChanges(changes) {
+        if (changes)
+            $("#saveBTN").attr("src","../skins/default/st_exclr.png");
+        else
+            $("#saveBTN").attr("src","../skins/default/btn_save.png");
+
+        ChangesMade = changes;
+    }
 
     function OnSave() {
         chkState = 0;
@@ -49,6 +63,8 @@
             success: function(result){
                 if (result != "1")
                     alert("Error in updating data");
+                else
+                    ToggleChanges(false);
             },
             error: function() {
                 alert("An error occurred while inserting the bookmark.");
@@ -112,9 +128,6 @@
     }
 
     function OnSelectCategory() {
-        //$("#addBK0").attr("src","second.jpg");
-        //$(bookmarksDIV).html("");
-
         $.ajax({
             type: "POST",
             url: "actionmng.php?action=2",
@@ -134,9 +147,6 @@
     }
 
     function addBookmark(elem) {
-        //alert(elem.data('venue'));
-        //alert($(catSEL).val());
-
         $.ajax({
             type: "POST",
             url: "actionmng.php?action=1",
@@ -168,7 +178,6 @@
 
         $.ajax({
             type: "GET",
-            //url: "http://dblp.org/search/publ/api",
             url: "http://dblp.org/search/publ/api?q=" + $(queryINPUT).val(),
             dataType: "text",
             success: function(xml){
@@ -195,7 +204,7 @@
 
                     $(resultsDIV).append("<span class='title'>" + title + '</span><br>');
                     $(resultsDIV).append("<span class='other'>" + venue + ' ' + year + ' pages: ' + pages + '</span><br>');
-                    $(resultsDIV).append("<img id='addBK" + hitCnt + "' src='../skins/default/btn_add3.png'><br><br>");
+                    $(resultsDIV).append("<img id='addBK" + hitCnt + "' src='../skins/default/btn_add.png'><br><br>");
 
                     varname = '#addBK' + hitCnt;
 
@@ -208,7 +217,6 @@
                     $(varname).data('url', $(this).find("url").text());
 
                     $(varname).click(function () {
-                        //alert($(this).data('year'));
                         addBookmark($(this));
                     });
 
@@ -228,15 +236,16 @@
 <div class="MAINBOX" style="width: 400px; height: 110px">
     <br><span>SEARCH</span><br>
     <input type="text" id="queryINPUT" value="" size="52">
-    <img src="<?php echo '../skins/default/btn_add.png' ?>" onclick="performSearch();" onMouseOver="return tooltip('AA', '', 'width:100,border:2,textcolor:#007700');" onMouseOut="return hideTip();">
+    <img src="<?php echo '../skins/default/search.png' ?>" onclick="performSearch();" onMouseOver="return tooltip('Search', '', 'width:100,border:2,textcolor:#007700');" onMouseOut="return hideTip();">
+    <img src="<?php echo '../skins/default/btn_exit.png' ?>" onclick="logOut();" onMouseOver="return tooltip('Logout', '', 'width:100,border:2,textcolor:#007700');" onMouseOut="return hideTip();">
 </div>
 
-<div class="MAINBOX" style="width: 400px; height: 300px; top: 130px">
-    <div id="resultsDIV" style="overflow: scroll; position: relative; top: 5px; left: 5px; width: 380px; height: 290px">
+<div class="MAINBOX" style="width: 400px; height: 400px; top: 130px">
+    <div id="resultsDIV" style="overflow: scroll; position: relative; top: 5px; left: 5px; width: 380px; height: 390px">
     </div>
 </div>
 
-<div class="MAINBOX" style="width: 400px; height: 500px; left: 440px">
+<div class="MAINBOX" style="width: 400px; height: 550px; left: 460px">
     <h3>My Papers</h3>
     Category<br>
 <?php
