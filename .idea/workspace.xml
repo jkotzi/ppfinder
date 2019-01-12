@@ -26,11 +26,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="logout.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="logout.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/logout.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
               <caret line="16" selection-start-line="16" selection-end-line="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dbconnect.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main/dbconnect.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -131,13 +140,13 @@
         <option value="$PROJECT_DIR$/main/login.php" />
         <option value="$PROJECT_DIR$/admin/install2.php" />
         <option value="$PROJECT_DIR$/admin/install1.php" />
-        <option value="$PROJECT_DIR$/main/dbconnect.php" />
         <option value="$PROJECT_DIR$/main/registration.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/css/loggedmenu.css" />
         <option value="$PROJECT_DIR$/main/actionmng.php" />
         <option value="$PROJECT_DIR$/main/loggedmenu.php" />
         <option value="$PROJECT_DIR$/main/logout.php" />
+        <option value="$PROJECT_DIR$/main/dbconnect.php" />
       </list>
     </option>
   </component>
@@ -228,12 +237,12 @@
       <workItem from="1546505414620" duration="1473000" />
       <workItem from="1546539268148" duration="2109000" />
       <workItem from="1547151668673" duration="3819000" />
-      <workItem from="1547312675853" duration="2280000" />
+      <workItem from="1547312675853" duration="2410000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60290000" />
+    <option name="totallyTimeSpent" value="60420000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
@@ -444,13 +453,6 @@
     <entry file="file://$PROJECT_DIR$/css/england_flag.png" />
     <entry file="file://$PROJECT_DIR$/css/banner.png" />
     <entry file="file://$PROJECT_DIR$/css/background2.png" />
-    <entry file="file://$PROJECT_DIR$/main/dbconnect.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/bannermenu.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -535,6 +537,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/dbconnect.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>

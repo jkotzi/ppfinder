@@ -3,12 +3,12 @@
 	$login = "root";
 	$pass = "";
 	$dbname = "ppfinder";
-/*
+
     $host = "nireas.it.teithe.gr";
     $login = "webeng5";
     $pass = "webeng5pwd";
     $dbname = "webeng5";
-*/
+
 
 	$con = mysqli_connect($host, $login, $pass);
 	
