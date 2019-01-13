@@ -14,8 +14,8 @@
       <file leaf-file-name="loggedmenu.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/loggedmenu.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="38" selection-start-line="38" selection-end-line="38" />
+            <state relative-caret-position="34">
+              <caret line="170" column="13" selection-start-line="170" selection-start-column="13" selection-end-line="170" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -33,7 +33,7 @@
         <entry file="file://$PROJECT_DIR$/main/dbconnect.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -42,7 +42,7 @@
         <entry file="file://$PROJECT_DIR$/css/loggedmenu.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1003">
-              <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+              <caret line="59" selection-start-line="59" selection-end-line="59" />
             </state>
           </provider>
         </entry>
@@ -69,7 +69,7 @@
         <entry file="file://$PROJECT_DIR$/main/registration.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
-              <caret line="21" column="64" lean-forward="true" selection-start-line="21" selection-start-column="64" selection-end-line="21" selection-end-column="64" />
+              <caret line="21" column="64" selection-start-line="21" selection-start-column="64" selection-end-line="21" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -78,7 +78,7 @@
         <entry file="file://$PROJECT_DIR$/main/login.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="952">
-              <caret line="56" column="72" lean-forward="true" selection-start-line="56" selection-start-column="32" selection-end-line="56" selection-end-column="72" />
+              <caret line="56" column="72" selection-start-line="56" selection-start-column="32" selection-end-line="56" selection-end-column="72" />
             </state>
           </provider>
         </entry>
@@ -87,7 +87,7 @@
         <entry file="file://$PROJECT_DIR$/main/actionmng.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1258">
-              <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
+              <caret line="74" selection-start-line="74" selection-end-line="74" />
             </state>
           </provider>
         </entry>
@@ -225,15 +225,16 @@
       <workItem from="1546539268148" duration="2109000" />
       <workItem from="1547151668673" duration="3819000" />
       <workItem from="1547312675853" duration="3607000" />
-      <workItem from="1547405016127" duration="603000" />
+      <workItem from="1547405016127" duration="1439000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62220000" />
+    <option name="totallyTimeSpent" value="63056000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -462,21 +463,21 @@
     <entry file="file://$PROJECT_DIR$/main/registration.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="21" column="64" lean-forward="true" selection-start-line="21" selection-start-column="64" selection-end-line="21" selection-end-column="64" />
+          <caret line="21" column="64" selection-start-line="21" selection-start-column="64" selection-end-line="21" selection-end-column="64" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/actionmng.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1258">
-          <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/loggedmenu.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1003">
-          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
         </state>
       </provider>
     </entry>
@@ -490,7 +491,7 @@
     <entry file="file://$PROJECT_DIR$/main/login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="952">
-          <caret line="56" column="72" lean-forward="true" selection-start-line="56" selection-start-column="32" selection-end-line="56" selection-end-column="72" />
+          <caret line="56" column="72" selection-start-line="56" selection-start-column="32" selection-end-line="56" selection-end-column="72" />
         </state>
       </provider>
     </entry>
@@ -504,14 +505,14 @@
     <entry file="file://$PROJECT_DIR$/main/dbconnect.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/loggedmenu.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        <state relative-caret-position="34">
+          <caret line="170" column="13" selection-start-line="170" selection-start-column="13" selection-end-line="170" selection-end-column="13" />
         </state>
       </provider>
     </entry>
