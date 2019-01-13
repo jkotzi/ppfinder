@@ -1,1 +1,11 @@
-http://nireas.it.teithe.gr/webeng5/
+http://nireas.it.teithe.gr/webeng5/ --> link gia tin istoselida
+
+ektelesi tou instal1.php, instal2.php gia basi dedomenwn me vasiko xristi ton test (kwdikos 123)
+register tou xristi stin istoselida, login me ton antistoixo kwdiko
+  
+  Database credentials
+
+    $host = "nireas.it.teithe.gr";
+    $login = "webeng5";
+    $pass = "webeng5pwd";
+    $dbname = "webeng5";
